@@ -14,13 +14,13 @@ scalar = pickle.load(open('scaling.pkl', 'rb'))
 def home():
     return render_template('home.html')
 
-@app.route('/predict', method=['POST'])
+@app.route('/predict', methods=['POST'])
 
 def predict():
     data = request.json['data']
     print(data)
     print(np.array(list(data.values())).reshape(1,-1))
-    new_data = scalar.transform(list(data.values()).reshape(1,-1))
+    new_data = scalar.transform(np.array(list(data.values())).reshape(1,-1))
     output = model.predict(new_data)
     print(output[0])
     return jsonify(output[0])
