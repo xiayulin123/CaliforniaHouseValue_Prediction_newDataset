@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Value Prediction</title>
+</head>
+<body>
+    <h1>House Value Prediction Form</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="feature1">Feature 1:</label>
+        <input type="text" id="feature1" name="feature1"><br><br>
+
+        <label for="feature2">Feature 2:</label>
+        <input type="text" id="feature2" name="feature2"><br><br>
+
+        <!-- Add more input fields for each feature you need -->
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
