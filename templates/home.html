@@ -7,16 +7,35 @@
 </head>
 <body>
     <h1>House Value Prediction Form</h1>
-    <form action="{{ url_for('predict') }}" method="post">
-        <label for="feature1">Feature 1:</label>
-        <input type="text" id="feature1" name="feature1"><br><br>
+    <form action="{{ url_for('predict_form') }}" method="post">
+        <label for="Median Income">Median Income:</label>
+        <input type="text" id="Median Income" name="Median Income"><br><br>
 
-        <label for="feature2">Feature 2:</label>
-        <input type="text" id="feature2" name="feature2"><br><br>
+        <label for="House Age">House Age:</label>
+        <input type="text" id="House Age" name="House Age"><br><br>
 
-        <!-- Add more input fields for each feature you need -->
+        <label for="Average Rooms">Average Rooms:</label>
+        <input type="text" id="Average Rooms" name="Average Rooms"><br><br>
+
+        <label for="Average Bedroom">Average Bedroom:</label>
+        <input type="text" id="Average Bedroom" name="Average Bedroom"><br><br>
+         <label for="Population">Population:</label>
+        <input type="text" id="Population" name="Population"><br><br>
+
+        <label for="Average Occupancy">Average Occupancy:</label>
+        <input type="text" id="Average Occupancy" name="Average Occupancy"><br><br>
+        <label for="Latitude">Latitude:</label>
+        <input type="text" id="Latitude" name="Latitude"><br><br>
+
+        <label for="Longitude">Longitude:</label>
+        <input type="text" id="Longitude" name="Longitude"><br><br>
 
         <input type="submit" value="Predict">
     </form>
+
+    <div>
+        <h2>Prediction Result:</h2>
+        <p>{{ prediction_text }}</p>
+    </div>
 </body>
 </html>
