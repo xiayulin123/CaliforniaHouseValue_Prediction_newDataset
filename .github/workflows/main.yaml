@@ -18,7 +18,6 @@ jobs:
       with:
         email: ${{ secrets.EMAIL }}
         heroku_api_key: ${{ secrets.API_KEY}}
-        heroku_api_name: ${{ secretes.APP_NAME}}
+        heroku_api_name: ${{ secrets.APP_NAME}}
         dockerfile_directory: ./
         dockerfile_name: Dockerfile
-        
